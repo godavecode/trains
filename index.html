@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Train Schedules</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+<!-- Main Bootstrap Search -->
+<div class="container">
+        <!--Jumbotron for Title-->
+        <div class="jumbotron">
+                <h1 class = "text-center">Any Time is Train Time, choo choo!</h1>
+        </div>
+        <!--This row is for the train schedule information--> 
+        <div class"row">
+                <div class="col-sm-12">
+                <br>
+
+                <!--We create a first panel to hold the current train schedule-->
+                <div class="panel panel-primary">
+                        <div class="panel-heading">
+                        <h3 class="panel-title">Current Train Schedule</h3>
+                </div>
+                <div class="panel-body">
+                        <!--We create a table to hold train information.-->
+                        <table class="table table-hover" id = "tableTrains">
+                                <thead>
+                                        <tr>
+                                                <th>Train Name</th>
+                                                <th>Destination</th>
+                                                <th>Frequency</th>
+                                                <th>Next Arrival</th>
+                                                <th>Minutes Away</th>
+                                        </tr>
+                                </thead>
+                                <tbody id="trainschedules">
+                                        <!--Fill with JS-->
+                                                                                        </tr>
+                                </tbody>
+                        </table>
+                </div>
+        </div>        
+        <!-- This row is for the Add Train information -->
+	<div class="row">
+		<div class="col-sm-12">
+		<br>
+                
+                <!--We create a panel to hold the current train input-->
+                <div class="panel panel-primary">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">Add Train</h3>
+                        </div>
+                        <div class="panel-body">
+                                <!--We create a form for the input-->
+                                <form role="form">
+
+                                <!--We create a text box to capture search term-->
+                                <div class="form-group">
+                                        <label for="search">Train Name</label>
+                                        <input type="text" class="form-control" id="trainInput">
+                                </div>
+                                <!--We create a text box to capture search term-->
+                                <div class="form-group">
+                                        <label for="search">Desintation</label>
+                                        <input type="text" class="form-control" id="destinationInput">
+                                </div>
+                                <!--We create a text box to capture search term-->
+                                <div class="form-group">
+                                        <label for="search">First Train Time(HH:mm - military time)</label>
+                                        <input type="text" class="form-control" id="tstartInput">
+                                </div>
+                                <!--We create a text box to capture search term-->
+                                <div class="form-group">
+                                        <label for="search">Frequency (min)</label>
+                                        <input type="text" class="form-control" id="frequencyInput">
+                                </div>
+                                <!--We create a submit button to start the search-->
+                                <button type="submit" class="btn btn-default" id="runTrain"> Submit</button>
+
+                                </form>
+                        </div>
+                </div>
+        </div> 
+</div>        
+
+<!--Footer-->
+<div class="row">
+        <div class="col-sm-12">
+      
+                <!-- Line Break followed by closing -->
+                <hr>
+                <h5 class="text-center"><small>Copywrite David Coello 2016<i class="fa fa-heart"></i></small></h5>
+
+        </div>
+</div>
+  
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- Code to Javascript File -->
+<script src="assets/app.js"></script>
+
+</body>
+</html>
